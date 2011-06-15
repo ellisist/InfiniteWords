@@ -1,3 +1,5 @@
+import StringIO
+
 class Word:
     def __init__(self):
         self.squares = []
@@ -10,3 +12,6 @@ class Word:
         for s in squares:
             score += s.score
         return score
+
+    def __str__(self):
+        ''.join([s.tile.letter for s in squares])
