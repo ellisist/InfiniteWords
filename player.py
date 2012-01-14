@@ -1,4 +1,4 @@
-import StringIO
+import StringIO, itertools
 
 class Player:
     """representation of a player in the game"""
@@ -22,3 +22,8 @@ class Player:
         print >>s, "Tiles:", self.tiles
         print >>s, "Words:", self.words
         return s.getvalue()
+
+    def playword(self,tiles,squares):
+        for tile, square in itertools.izip(tiles,squares):
+            square.tile = tile
+        self.words.append(Word(squares))

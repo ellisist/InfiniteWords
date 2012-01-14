@@ -3,16 +3,16 @@ import game, player, board, letterbag
 players = [player.Player("Player " + str(n+1)) for n in range(3)]
 g = game.Game(board.Board(),letterbag.Letterbag(),players)
 
-print g
 
+# turn generator
 t = g.taketurns()
 
-print t
-print t.next()
-print t.next()
-print t.next()
-print t.next()
-print t.next()
-print t.next()
- 
+print g
+
+i = 0
+while(i < 5):
+    player = t.next()
+    player.playword(self,)
+    i += 1
+
 

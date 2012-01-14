@@ -11,3 +11,9 @@ class Board:
         print >>s, "Board:", id(self)
         print >>s, self.squares
         return s.getvalue()
+    def getSquare(x,y):
+        # first check if square is in squares if it is, return it.  
+        
+        #if not, make a new square, add it to squares, then return.
+        
+        
